@@ -19,6 +19,13 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
         <welcome-file>faces/index.xhtml</welcome-file>
     </welcome-file-list>
+
+    <ejb-local-ref>
+        <ejb-ref-name>RecordManagedBean</ejb-ref-name>
+        <ejb-ref-type>Session</ejb-ref-type>
+        <local>com.softbanco.RecordManagedBean</local>
+    </ejb-local-ref>
 </web-app>

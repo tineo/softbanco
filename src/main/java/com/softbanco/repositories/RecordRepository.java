@@ -2,6 +2,7 @@ package com.softbanco.repositories;
 
 import com.softbanco.entities.Record;
 import java.util.List;
+import javax.ejb.Local;
 import javax.ejb.Remote;
 
 /**
@@ -9,7 +10,7 @@ import javax.ejb.Remote;
  * 
  * @author Petr Smrcek <smrkous@gmail.com>
  */
-@Remote
+@Local
 public interface RecordRepository {
     public void create(Record r);
     public void delete(int id);

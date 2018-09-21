@@ -2,6 +2,7 @@ package com.softbanco;
 
 import java.util.List;
 import javax.ejb.EJB;
+import javax.ejb.Local;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
@@ -14,6 +15,7 @@ import org.primefaces.event.RowEditEvent;
  * 
  * @author Petr Smrcek <smrkous@gmail.com>
  */
+
 @ManagedBean
 @RequestScoped
 public class RecordManagedBean 
