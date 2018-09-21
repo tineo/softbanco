@@ -6,6 +6,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+
+
+%>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -25,7 +30,7 @@
 <body>
 <header>
     <div class="contenedor">
-        <h2 class="titulo-banco">BANCO</h2>
+        <h2 class="titulo-banco">BANCO  ${ sessionScope.user }</h2>
         <button class="btn btn-primary btn-s">Salir <span class="icon-exit"> </span> </button>
     </div>
 

@@ -11,5 +11,15 @@
       <user-name>root</user-name>
       <introspection-schemas>*:bancofake</introspection-schemas>
     </data-source>
+    <data-source name="banco@localhost" uuid="c144d8d7-7ead-499d-9576-64df0bbaae7b">
+      <database-info product="MySQL" version="5.7.23-0ubuntu0.18.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.44 ( Revision: b3cda4f864902ffdde495b9df93937c3e20009be )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-schemas>*:banco</introspection-schemas>
+    </data-source>
   </component>
 </project>
