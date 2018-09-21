@@ -3,7 +3,6 @@
 
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
-        <welcome-file>faces/index.xhtml</welcome-file>
     </welcome-file-list>
 
     <filter>
@@ -12,7 +11,7 @@
     </filter>
     <filter-mapping>
         <filter-name>AuthenticationFilter</filter-name>
-        <url-pattern>/home.jsp</url-pattern>
+        <url-pattern>/</url-pattern>
         <url-pattern>/index.jsp</url-pattern>
     </filter-mapping>
 </web-app>

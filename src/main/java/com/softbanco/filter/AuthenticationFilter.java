@@ -22,24 +22,21 @@ public class AuthenticationFilter implements Filter {
         HttpServletResponse res = (HttpServletResponse) response;
 
         HttpSession session = req.getSession(false);
-
+        System.out.println("SESSION");
+        System.out.println(session);
         if (session == null) {   //checking whether the session exists
-            this.context.log("Unauthorized access request");
+            this.context.log("Unauthorized access request 2");
             res.sendRedirect(req.getContextPath() + "/login.jsp");
+
         } else {
-            // pass the request along the filter chain
-            //chain.doFilter(request, response);
-
-            String loginURL = req.getContextPath() + "/login.jsp";
-
-            if (req.getRequestURI().equals(loginURL)) {
-                chain.doFilter(request, response);
-            }
-            else {
-                this.context.log("Unauthorized access request");
+            if( session.getAttribute("user") == null){
+                this.context.log("Unauthorized access request 2");
                 res.sendRedirect(req.getContextPath() + "/login.jsp");
             }
-
+            System.out.println("USER");
+            System.out.println(session.getAttribute("user"));
+            // pass the request along the filter chain
+            chain.doFilter(req, res);
 
         }
     }

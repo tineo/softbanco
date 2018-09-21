@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
         Cliente user = loginService.getClienteByNumeroTarjeta(userId);
         if(result == true){
             request.getSession().setAttribute("user", user);
-            response.sendRedirect("home.jsp");
+            response.sendRedirect("index.jsp");
         }
         else{
             response.sendRedirect("login.jsp");
