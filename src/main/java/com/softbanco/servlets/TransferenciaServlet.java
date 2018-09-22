@@ -17,12 +17,8 @@ import java.util.ArrayList;
 
 @WebServlet(name = "TransferenciaServlet", urlPatterns = {"/transferencia"})
 public class TransferenciaServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         String nro_cuenta = request.getParameter("nro_cuenta");
         int monto = Integer.parseInt(request.getParameter("monto"));
         ClienteService service = new ClienteService();
@@ -37,5 +33,13 @@ public class TransferenciaServlet extends HttpServlet {
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         response.getWriter().write(json);
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        processRequest(request, response);
     }
 }
