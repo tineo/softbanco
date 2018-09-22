@@ -33,20 +33,14 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("GET");
-        System.out.println("u:"+request.getParameter("username"));
-        System.out.println("p:"+request.getParameter("password"));
-        request.getParameterMap().values().forEach(strings -> System.out.println(strings));
 
         processRequest(request, response);
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("POST");
-        System.out.println("u:"+request.getParameter("username"));
-        System.out.println("p:"+request.getParameter("password"));
-        //processRequest(request, response);
+
+        processRequest(request, response);
     }
     @Override
     public String getServletInfo() {

@@ -14,6 +14,9 @@ public class Cliente implements Serializable {
     @Column(name="nombre")
     private String nombre;
 
+    @Column(name="numero_cuenta")
+    private String numero_cuenta;
+
     @Column(name="numero_tarjeta")
     private String numero_tarjeta;
 
@@ -41,6 +44,15 @@ public class Cliente implements Serializable {
 
     public Cliente setNombre(String nombre) {
         this.nombre = nombre;
+        return this;
+    }
+
+    public String getNumero_cuenta() {
+        return numero_cuenta;
+    }
+
+    public Cliente setNumero_cuenta(String numero_cuenta) {
+        this.numero_cuenta = numero_cuenta;
         return this;
     }
 
