@@ -28,16 +28,19 @@ public class TransferenciaServlet extends HttpServlet {
         int monto = Integer.parseInt(request.getParameter("monto"));
 
         Cliente receiver = service.getClienteByNroCuenta(nro_cuenta);
+        HttpSession session = request.getSession(true);
 
         if( receiver == null ) {
-            HttpSession session = request.getSession(true);
             session.setAttribute("error","Cuenta no es valida");
             response.sendRedirect("index.jsp");
+        }else{
+            session.setAttribute("error",null);
+
         }
 
         System.out.println("RECEIVER");
         System.out.println(receiver.getId_cliente());
-        HttpSession session = request.getSession(true);
+
         Cliente cliente = (Cliente) session.getAttribute("user");
         OperacionesService service2 =  new OperacionesService();
         int id_transaccion = service2.makeTransaccion(cliente,receiver, monto );
