@@ -34,7 +34,7 @@
     </header>
     <form action="login" class="main" method="post">
         <div class="user">
-            <label for="username">Numero de cuenta: </label>
+            <label for="username">Numero de tarjeta: </label>
             <input type="text" id="username" name="username" placeholder="Cuenta">
         </div>
 

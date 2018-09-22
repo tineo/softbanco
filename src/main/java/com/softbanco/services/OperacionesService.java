@@ -25,8 +25,8 @@ public class OperacionesService {
             tx = session.getTransaction();
             tx.begin();
             Query query = session
-                    .createQuery("from Transaccion WHERE id_cliente = :id_cliente")
-                    .setParameter("id_cliente", cliente.getId_cliente());
+                    .createQuery("from Transaccion WHERE id_cliente = :id_cliente order by id_transaccion desc")
+                    .setParameter("id_cliente", cliente.getId_cliente() );
             lista = (ArrayList<Transaccion>)query.getResultList();
             tx.commit();
         } catch (Exception e) {
