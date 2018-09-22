@@ -47,7 +47,7 @@ public class OperacionesService {
         DateFormat sdf = new SimpleDateFormat("MM/dd");
         Date now = Calendar.getInstance().getTime();
         String current = df.format(now);
-        String scur = df.format(now);
+        String scur = sdf.format(now);
 
 
         Transaccion t01 =  new Transaccion();

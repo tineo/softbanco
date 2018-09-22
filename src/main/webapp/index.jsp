@@ -6,10 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
-
-
-%>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -30,7 +26,7 @@
 <body>
 <header>
     <div class="contenedor">
-        <h2 class="titulo-banco">BANCO  ${ sessionScope.user }</h2>
+        <h2 class="titulo-banco">BANCO </h2>
         <button class="btn btn-primary btn-s">Salir <span class="icon-exit"> </span> </button>
     </div>
 
@@ -46,11 +42,11 @@
                         <option value="null">--Seleccione--</option>
                         <option value="8">8</option>;
                 </select> -->
-                <h2 class="valor-cuenta">9999999504</h2>
+                <h2 class="valor-cuenta">${ sessionScope.user.getNumero_cuenta() }</h2>
             </div>
             <div class="montoActual">
 
-                <h2 class="valor-Monto">100</h2>
+                <h2 class="valor-Monto">${ sessionScope.user.getSaldo() }</h2>
                 <h2 class="titulo-Monto">Saldo disponible</h2>
             </div>
         </div>

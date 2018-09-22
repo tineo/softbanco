@@ -24,7 +24,7 @@ public class TransferenciaServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String nro_cuenta = request.getParameter("nro_cuenta");
-        int monto = Integer.parseInt(request.getParameter("nro_cuenta"));
+        int monto = Integer.parseInt(request.getParameter("monto"));
         ClienteService service = new ClienteService();
         Cliente receiver = service.getClienteByNroCuenta(nro_cuenta);
 
