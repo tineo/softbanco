@@ -43,7 +43,8 @@ public class OperacionesService {
     public int makeTransaccion(Cliente sender, Cliente receiver, int monto){
         UUID uuid = UUID.randomUUID();
         String randomUUIDString = uuid.toString();
-        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        //2018-09-22 01:18:10
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         DateFormat sdf = new SimpleDateFormat("MM/dd");
         Date now = Calendar.getInstance().getTime();
         String current = df.format(now);

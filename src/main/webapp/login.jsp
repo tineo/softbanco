@@ -32,7 +32,7 @@
 
         <h1>SING IN</h1>
     </header>
-    <form action="login" class="main">
+    <form action="login" class="main" method="post">
         <div class="user">
             <label for="username">Numero de cuenta: </label>
             <input type="text" id="username" name="username" placeholder="Cuenta">
@@ -44,7 +44,7 @@
         </div>
         <button class="btn btn-primary btn-p" >Ingresar</button>
     </form>
-    <a href="banco.html">IR A BANCO</a>
+
 
 
 </div>

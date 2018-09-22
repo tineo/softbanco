@@ -10,7 +10,7 @@ public class Transaccion  implements Serializable{
     public static final int RETIRO = 1;
     public static final int DEPOSITO = 0;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_transaccion", unique=true, nullable=false)
     private int id_transaccion;
 

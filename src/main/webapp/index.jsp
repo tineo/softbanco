@@ -1,4 +1,8 @@
-<%--
+<%@ page import="com.softbanco.services.OperacionesService" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.softbanco.entities.Cliente" %>
+<%@ page import="com.softbanco.entities.Transaccion" %>
+<%@ page import="com.softbanco.services.ClienteService" %><%--
   Created by IntelliJ IDEA.
   User: tineo
   Date: 21/09/18
@@ -27,7 +31,7 @@
 <header>
     <div class="contenedor">
         <h2 class="titulo-banco">BANCO </h2>
-        <button class="btn btn-primary btn-s">Salir <span class="icon-exit"> </span> </button>
+        <a class="btn btn-primary btn-s" href="logout">Salir <span class="icon-exit"> </span> </a>
     </div>
 
 </header>
@@ -45,8 +49,12 @@
                 <h2 class="valor-cuenta">${ sessionScope.user.getNumero_cuenta() }</h2>
             </div>
             <div class="montoActual">
+                <%
+                    ClienteService service =  new ClienteService();
+                    Cliente cliente = (Cliente) session.getAttribute("user");
 
-                <h2 class="valor-Monto">${ sessionScope.user.getSaldo() }</h2>
+                %>
+                <h2 class="valor-Monto"><%=service.getSaldo(cliente.getId_cliente()) %></h2>
                 <h2 class="titulo-Monto">Saldo disponible</h2>
             </div>
         </div>
@@ -62,21 +70,26 @@
                 <div class="contenedor-center">
                     <div class="contenedor-center-up">
                         <h2 class="titulo-transaccion-pago"><span class="icon-coin-dollar"> </span>Transaccion</h2>
-                        <form action="" method="POST" name="form-gasto" class="formulario">
+                        <form action="transferencia" method="POST" name="form-gasto" class="formulario">
                             <div class="datos">
+
+                                <% if(session.getAttribute("error") != null) { %>
+                                <div style="display: block; width: 100%" ><h6 style="color: red; font-weight: bold;"><%=session.getAttribute("error") %></h6></div>
+                                <% } %>
 
                                 <div class="contenedor-nota">
                                     <h2 class="titulo-input-cuenta">Cuenta</h2>
-                                    <input type="text" class="input-nota" name="nota" id="nota" placeholder="Numero de cuenta:">
+                                    <input type="text" class="input-nota" name="nro_cuenta" id="nota" placeholder="Numero de cuenta:" required />
                                 </div>
 
                                 <div class="contenedor-costo">
                                     <h2 class="titulo-costo">Monto</h2>
-                                    <input type="text" class="input-costo"  name="costo" id="costo" placeholder="Costo:">
+                                    <input type="text" class="input-costo"  name="monto" id="costo" placeholder="Costo:" required />
                                 </div>
 
                             </div>
-                            <button class="btn btn-primary btn-p">Realizar pago</button>
+                            <input class="btn btn-primary btn-p" type="submit" value="Realizar pago">
+
                         </form>
                     </div>
                 </div>
@@ -88,20 +101,43 @@
             <div class="contenedor-center">
                 <div class="contenedor-center-down">
                     <div class="fomulario-tabla" >
-                        <h2 class="titulo-tabla">TABLA DE TRANSACCIONES</h1>
+                        <h2 class="titulo-tabla">TABLA DE TRANSACCIONES</h2>
                             <div class="tabla-container">
                                 <table  class="tablaGastos">
+
+                                    <%
+
+                                        //HttpSession session = request.getSession(true);
+
+
+                                        OperacionesService serv = new OperacionesService();
+                                        ArrayList<Transaccion> lista = serv.getListOpeaciones(cliente);
+
+                                    %>
                                     <thead>
                                     <Tr>
-                                        <Th>Cuenta</Th><Th>Monto</Th>
+                                        <Th>Cuenta</Th><Th>Fecha / Hora</Th><Th>Operacion</Th><Th>Monto</Th>
                                     </Tr>
                                     </thead>
+                                    <tbody>
+                                    <% for(int i = 0; i < lista.size(); i+=1) {
+                                        String estilo = "", signo ="";
+                                        if (lista.get(i).getTipo() == Transaccion.RETIRO) {
+
+                                            estilo = "style=\"color: darkred\"";
+                                            signo = "-";
+                                        }
+
+                                    %>
                                     <Tr>
-                                        <Td>998565452211</Td><Td>+180.60</Td>
+                                        <Td><%=service.getCuentaByCodOpe(lista.get(i).getCodigo_operacion(), lista.get(i).getTipo() )%></Td>
+                                        <Td><%=lista.get(i).getFecha()%></Td>
+                                        <Td><%=lista.get(i).getNombre_transaccion()%></Td>
+                                        <Td <%=estilo %> >  <%=signo %> <%=lista.get(i).getMonto()%></Td>
+
                                     </Tr>
-                                    <Tr>
-                                        <Td>998565452211</Td><Td>-150.60</Td>
-                                    </Tr>
+                                    <% } %>
+                                    </tbody>
                                     <!-- <?php foreach ($transacciones as $transaccion): ?>
                                         <Tr>
                                             <Td><?php echo $transaccion['numCuenta'] ?></Td><Td><?php echo $transaccion['monto'] ?></Td>
@@ -117,6 +153,6 @@
     </section>
 
 </section>
-<a href="login.html">IR A LOGIN</a>
+
 </body>
 </html>
