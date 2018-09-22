@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d413fe36-1305-4a87-ad19-7bf4f732dc82" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/softbanco/services/OperacionesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/softbanco/servlets/OperacionesServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softbanco/servlets/OperacionesServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/softbanco/servlets/OperacionesServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/softbanco/servlets/OperacionesServlet.class" afterDir="false" />
@@ -59,11 +58,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OperacionesServlet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OperacionesServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/softbanco/servlets/OperacionesServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="14" column="69" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
+            <state relative-caret-position="300">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -80,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoginService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/softbanco/services/LoginService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
+            <state relative-caret-position="-135">
+              <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -456,7 +455,7 @@
       <option name="presentableId" value="Default" />
       <updated>1537549859778</updated>
       <workItem from="1537549863208" duration="10015000" />
-      <workItem from="1537562469528" duration="11844000" />
+      <workItem from="1537562469528" duration="12569000" />
     </task>
     <task id="LOCAL-00001" summary="Bye bye Butterfly">
       <created>1537560700004</created>
@@ -479,11 +478,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537573684756</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Complete login">
+      <created>1537574459384</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1537574459385</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21859000" />
+    <option name="totallyTimeSpent" value="22584000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -506,24 +512,24 @@
       <window_info anchor="right" id="CDI" order="3" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="3" weight="0.28259173" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.28259173" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="JSF" order="3" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952693" />
-      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.32952693" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32952693" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.32952693" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32952693" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32952693" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32952693" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32952693" />
       <window_info id="Persistence" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" weight="0.32952693" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.649635" visible="true" weight="0.29117876" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.649635" visible="true" weight="0.29117876" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" sideWeight="0.35036495" side_tool="true" weight="0.29117876" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32952693" />
@@ -829,16 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/softbanco/services/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softbanco/servlets/LogoutServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -858,8 +854,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softbanco/servlets/OperacionesServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="14" column="69" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
+        <state relative-caret-position="300">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/softbanco/services/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135">
+          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

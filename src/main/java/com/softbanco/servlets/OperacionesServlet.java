@@ -29,7 +29,6 @@ public class OperacionesServlet extends HttpServlet {
         OperacionesService service =  new OperacionesService();
         ArrayList<Transaccion> transacciones =  service.getListOpeaciones();
 
-        String ejm = "oe/e";
         String json = new Gson().toJson(transacciones);
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
